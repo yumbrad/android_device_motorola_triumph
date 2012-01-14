@@ -50,6 +50,7 @@ TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/motorola/triumph/releaseto
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/motorola/triumph/releasetools/triumph_ota_from_target_files
 
 BOARD_USES_QCOM_HARDWARE := true
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 BOARD_USES_QCOM_LIBS := true
 BOARD_USES_QCOM_LIBRPC := true
 BOARD_USE_QCOM_PMEM := true
