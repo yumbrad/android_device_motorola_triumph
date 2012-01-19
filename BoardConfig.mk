@@ -96,7 +96,7 @@ BOARD_USE_CAF_LIBCAMERA := true
 #BOARD_VENDOR_QCOM_GPS_HAS_BROKEN_XTRA := true
 
 # USB
-BOARD_USE_USB_MASS_STORAGE_SWITCH := true
+#BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun0/file"
 #BOARD_UMS_LUNFILE := "/sys/devices/platform/usb_mass_storage/lun0/file"
 

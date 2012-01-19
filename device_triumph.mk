@@ -146,10 +146,10 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/lib/libmmipl.so:/system/lib/libmmipl.so
 
 # EGL/GPU
-# PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 #    device/motorola/triumph/prebuilt/lib/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
 #    device/motorola/triumph/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
-#    device/motorola/triumph/prebuilt/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
+#   device/motorola/triumph/prebuilt/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
 #    device/motorola/triumph/prebuilt/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
 #    device/motorola/triumph/prebuilt/lib/libgsl.so:/system/lib/libgsl.so \
 #    device/motorola/triumph/files/etc/firmware/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \
