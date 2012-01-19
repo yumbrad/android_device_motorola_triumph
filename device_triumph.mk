@@ -44,8 +44,8 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/ueventd.triumph.rc:root/ueventd.triumph.rc
 
 # Vold
-PRODUCT_COPY_FILES += \
-    device/motorola/triumph/vold.fstab:system/etc/vold.fstab
+#PRODUCT_COPY_FILES += \
+#    device/motorola/triumph/vold.fstab:system/etc/vold.fstab
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -56,7 +56,7 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.camera.front.xml:/system/etc/permissions/android.hardware.camera.front.xml \
     frameworks/base/data/etc/android.hardware.camera.xml:/system/etc/permissions/android.hardware.camera.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:/system/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/base/data/etc/android.hardware.wifi.xml:/system/etc/permissions/android.hardware.wifi.xml \
+#    frameworks/base/data/etc/android.hardware.wifi.xml:/system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:/system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/base/data/etc/android.hardware.sensor.compass.xml:/system/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:/system/etc/permissions/android.hardware.sensor.light.xml \
@@ -70,7 +70,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/init.qcom.bt.sh:/system/etc/init.qcom.fm.sh \
     device/motorola/triumph/files/etc/init.qcom.sdio.sf6.sh:/system/etc/init.qcom.sdio.sf6.sh \
     device/motorola/triumph/files/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
-    device/motorola/triumph/files/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh \
+#    device/motorola/triumph/files/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh \
     device/motorola/triumph/files/etc/init.apn.sh:/system/etc/init.apn.sh \
     device/motorola/triumph/files/etc/telephony.sql:/system/etc/telephony.sql 
 
@@ -124,8 +124,8 @@ PRODUCT_COPY_FILES += \
 
 # Hostapd
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/prebuilt/bin/hostapd:/system/bin/hostapd \
-    device/motorola/triumph/prebuilt/bin/hostapd_cli:/system/bin/hostapd_cli \
+#    device/motorola/triumph/prebuilt/bin/hostapd:/system/bin/hostapd \
+#    device/motorola/triumph/prebuilt/bin/hostapd_cli:/system/bin/hostapd_cli \
     device/motorola/triumph/files/etc/firmware/wlan/hostapd_default.conf:/system/etc/firmware/wlan/hostapd_default.conf \
     device/motorola/triumph/files/etc/init.d/08hostapd:/system/etc/init.d/08hostapd
 
