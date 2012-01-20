@@ -67,3 +67,15 @@ ro.telephony.call_ring.delay=1000
 wifi.wapi=0
 
 ro.tethering.kb_disconnect=1
+
+#For USB mount
+persist.sys.usb.config=mass_storage,adb
+
+#HW accel
+debug.fb.rgb565=0
+debug.composition.type=dyn
+ro.sf.compbypass.enable=1
+debug.enabletr=false
+com.qc.hardware=true
+com.qc.hdmi_out=true
+ro.config.disable_hw_accel=false
