@@ -45,7 +45,7 @@ PRODUCT_COPY_FILES += \
 
 # Vold
 #PRODUCT_COPY_FILES += \
-#    device/motorola/triumph/vold.fstab:system/etc/vold.fstab
+    device/motorola/triumph/vold.fstab:system/etc/vold.fstab
 
 # Permissions
 PRODUCT_COPY_FILES += \
