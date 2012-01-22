@@ -44,7 +44,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/ueventd.triumph.rc:root/ueventd.triumph.rc
 
 # Vold
-#PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
     device/motorola/triumph/vold.fstab:system/etc/vold.fstab
 
 # Permissions
@@ -56,7 +56,7 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.camera.front.xml:/system/etc/permissions/android.hardware.camera.front.xml \
     frameworks/base/data/etc/android.hardware.camera.xml:/system/etc/permissions/android.hardware.camera.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:/system/etc/permissions/android.hardware.location.gps.xml \
-#    frameworks/base/data/etc/android.hardware.wifi.xml:/system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/base/data/etc/android.hardware.wifi.xml:/system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:/system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/base/data/etc/android.hardware.sensor.compass.xml:/system/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:/system/etc/permissions/android.hardware.sensor.light.xml \
@@ -70,7 +70,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/init.qcom.bt.sh:/system/etc/init.qcom.fm.sh \
     device/motorola/triumph/files/etc/init.qcom.sdio.sf6.sh:/system/etc/init.qcom.sdio.sf6.sh \
     device/motorola/triumph/files/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
-#    device/motorola/triumph/files/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh \
+    device/motorola/triumph/files/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh \
     device/motorola/triumph/files/etc/init.apn.sh:/system/etc/init.apn.sh \
     device/motorola/triumph/files/etc/telephony.sql:/system/etc/telephony.sql 
 
@@ -149,7 +149,7 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_COPY_FILES += \
 #    device/motorola/triumph/prebuilt/lib/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
 #    device/motorola/triumph/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
-#   device/motorola/triumph/prebuilt/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
+#    device/motorola/triumph/prebuilt/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
 #    device/motorola/triumph/prebuilt/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
 #    device/motorola/triumph/prebuilt/lib/libgsl.so:/system/lib/libgsl.so \
 #    device/motorola/triumph/files/etc/firmware/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \
