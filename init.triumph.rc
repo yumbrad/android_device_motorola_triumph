@@ -1,3 +1,10 @@
+on early-init
+	export EXTERNAL_STORAGE /mnt/sdcard
+	mkdir /mnt/sdcard 0000 system system
+
+	# for backwards compatibility
+	symlink /mnt/sdcard /sdcard
+
 on early-fs
     mkdir /system
     mkdir /data 0771 system system
@@ -52,6 +59,10 @@ on boot
 
     chmod 0665 /dev/graphics/fb0
     chmod 0665 /dev/graphics/fb1
+
+    chmod 0666 /dev/kgsl-2d0
+    chmod 0666 /dev/kgsl-3d0
+    chmod 0666 /dev/genlock
 
     chmod 0666 /sys/class/leds/button-backlight/brightness
 
@@ -122,6 +133,7 @@ on boot
     chown system input /sys/class/input/input4/enable
     chown system input /sys/class/input/input4/delay
     chown system input /sys/class/input/input4/wake
+
     chmod 0664 /sys/class/input/input5/enable
     chmod 0664 /sys/class/input/input5/data
     chmod 0664 /sys/class/input/input5/name
@@ -191,10 +203,10 @@ service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     oneshot
 
 # KD 9/12/2011  Add service at boot to populate the APN in the telephony area
-service apn-populate /system/bin/sh /system/etc/init.apn.sh
-    user root
-    group radio
-    oneshot
+#service apn-populate /system/bin/sh /system/etc/init.apn.sh
+#    user root
+#    group radio
+#    oneshot
 
 service gpsone_daemon /system/bin/gpsone_daemon
     user root
@@ -250,6 +262,7 @@ service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     oneshot
 
 service qcom-sh /system/bin/sh /init.qcom.sh
+	class main
     user root
     oneshot
 
@@ -261,6 +274,7 @@ on property:ro.hdmi.enable=true
     start hdmid
 
 service geomagneticd /system/bin/geomagneticd
+	class main
     user compass
     group system input
 
@@ -269,10 +283,12 @@ service orientationd /system/bin/orientationd
     group system input
 
 service proximityd /system/bin/proximityd
+	class main
     user compass
     group system input
 
 service lightd /system/bin/lightd
+	class main
     user compass
     group system input
 
@@ -295,11 +311,13 @@ service iprenew_wlan0 /system/bin/dhcpcd -n
     oneshot
 
 service qcom-wifi /system/bin/sh /system/etc/init.qcom.wifi.sh
+	class main
     user root
     disabled
     oneshot
 
 service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
+	class main
     user root
     group root
     oneshot

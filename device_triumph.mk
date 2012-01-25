@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     libaudiohw_legacy \
     libaudioutils \
+	libtinyalsa \
     libOmxCore \
     libOmxVenc \
     libOmxVdec
@@ -152,8 +153,8 @@ PRODUCT_COPY_FILES += \
 #    device/motorola/triumph/prebuilt/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
 #    device/motorola/triumph/prebuilt/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
 #    device/motorola/triumph/prebuilt/lib/libgsl.so:/system/lib/libgsl.so \
-#    device/motorola/triumph/files/etc/firmware/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \
-#    device/motorola/triumph/files/etc/firmware/yamato_pm4.fw:/system/etc/firmware/yamato_pm4.fw
+    device/motorola/triumph/files/etc/firmware/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \
+    device/motorola/triumph/files/etc/firmware/yamato_pm4.fw:/system/etc/firmware/yamato_pm4.fw
 
 # Sensors
 PRODUCT_COPY_FILES += \

@@ -157,12 +157,14 @@
          USB interfaces.  If the device doesn't want to support tething over USB this should
          be empty.  An example would be "usb.*" -->
     <string-array translatable="false" name="config_tether_usb_regexs">
+	<item>"usb\\d"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
          should be empty.  An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
+	<item>"softap.*"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -186,7 +188,9 @@
     </string-array>
 
     <!-- Regex of wired ethernet ifaces -->
-    <string translatable="false" name="config_ethernet_iface_regex">wlan\\d</string>
+    <string translatable="false" name="config_ethernet_iface_regex">
+	<item>wlan\\d</item>
+    </string>
 
     <!-- If the mobile hotspot feature requires provisioning, a package name and class name
         can be provided to launch a supported application that provisions the devices.

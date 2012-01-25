@@ -3,7 +3,8 @@
 #
 ro.telephony.ril_nid=97
 ro.telephony.ril_prl=1115
-ro.telephony.ril_class=Triumph
+# It seems we don't need this line anymore for cm9
+#ro.telephony.ril_class=Triumph
 ro.ril.def.preferred.network=4
 ro.telephony.default_network=4
 rild.libpath=/system/lib/libril-qc-1.so
@@ -69,7 +70,7 @@ wifi.wapi=0
 ro.tethering.kb_disconnect=1
 
 #For USB mount
-persist.sys.usb.config=adb
+persist.sys.usb.config=mass_storage,adb
 
 #HW accel
 debug.fb.rgb565=0
