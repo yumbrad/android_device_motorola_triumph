@@ -3,8 +3,7 @@
 #
 ro.telephony.ril_nid=97
 ro.telephony.ril_prl=1115
-# It seems we don't need this line anymore for cm9
-#ro.telephony.ril_class=Triumph
+ro.telephony.ril_class=QualcommNoSimReadyRIL
 ro.ril.def.preferred.network=4
 ro.telephony.default_network=4
 rild.libpath=/system/lib/libril-qc-1.so
