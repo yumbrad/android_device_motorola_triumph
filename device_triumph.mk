@@ -20,24 +20,32 @@ PRODUCT_PACKAGES += \
     Gallery3d \
     SpareParts \
     Term \
+    FileManager \
+    LatinIME \
+    Mms \
     gps.triumph \
     lights.triumph \
+    copybit.msm7x30 \
     gralloc.msm7x30 \
-    hwcomposer.default \
+#    hwcomposer.default \
     hwcomposer.msm7x30 \
     overlay.default \
     libgenlock \
     libmemalloc \
     liboverlay \
-    audio_policy.triumph \
-    audio.primary.triumph \
+    audio_policy.msm7x30 \
+    audio.primary.msm7x30 \
     audio.a2dp.default \
-    libaudiohw_legacy \
+#    libaudiohw_legacy \
     libaudioutils \
-	libtinyalsa \
+    libtinyalsa \
     libOmxCore \
     libOmxVenc \
     libOmxVdec
+
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm7x30
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -130,6 +138,12 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/firmware/wlan/hostapd_default.conf:/system/etc/firmware/wlan/hostapd_default.conf \
     device/motorola/triumph/files/etc/init.d/08hostapd:/system/etc/init.d/08hostapd
 
+# Audio 
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/lib/libaudioalsa.so:/system/lib/libaudioalsa.so \
+    device/motorola/triumph/prebuilt/lib/libaudioalsa.so:/obj/lib/libaudioalsa.so \
+    device/motorola/triumph/prebuilt/lib/liba2dp.so:/system/lib/liba2dp.so 
+
 # GPS
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/loc_parameter.ini:system/etc/loc_parameter.ini
@@ -147,12 +161,15 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/lib/libmmipl.so:/system/lib/libmmipl.so
 
 # EGL/GPU
-#PRODUCT_COPY_FILES += \
-#    device/motorola/triumph/prebuilt/lib/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
-#    device/motorola/triumph/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
-#    device/motorola/triumph/prebuilt/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
-#    device/motorola/triumph/prebuilt/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
-#    device/motorola/triumph/prebuilt/lib/libgsl.so:/system/lib/libgsl.so \
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/lib/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
+    device/motorola/triumph/prebuilt/lib/egl/eglsubAndroid.so:/system/lib/egl/eglsubAndroid.so \
+    device/motorola/triumph/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
+    device/motorola/triumph/prebuilt/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
+    device/motorola/triumph/prebuilt/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
+    device/motorola/triumph/prebuilt/lib/libgsl.so:/system/lib/libgsl.so \
+    device/motorola/triumph/prebuilt/lib/libsc-a2xx.so:/system/lib/libsc-a2xx.so \
+    device/motorola/triumph/prebuilt/lib/libC2D2.so:/system/lib/libC2D2.so \
     device/motorola/triumph/files/etc/firmware/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \
     device/motorola/triumph/files/etc/firmware/yamato_pm4.fw:/system/etc/firmware/yamato_pm4.fw
 
@@ -169,9 +186,10 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/media_profiles.xml:system/etc/media_profiles.xml
 
 # Modules
-PRODUCT_COPY_FILES += \
-    device/motorola/triumph/modules/tun.ko:/system/lib/modules/tun.ko \
-    device/motorola/triumph/modules/cifs.ko:/system/lib/modules/cifs.ko
+# commenting these until I rebuild the kernel and make up to date versions of these modules
+#PRODUCT_COPY_FILES += \
+#    device/motorola/triumph/modules/tun.ko:/system/lib/modules/tun.ko \
+#    device/motorola/triumph/modules/cifs.ko:/system/lib/modules/cifs.ko
 
 # Init.d task management
 PRODUCT_COPY_FILES += \
