@@ -17,10 +17,6 @@
 VENDOR=motorola
 DEVICE=triumph
 
-: <<'END'
-# Commenting out this section since if you did a repo sync on my repo, you already
-# have the proprietary files in <working directory>/vendor/motorola/triumph
-
 mkdir -p ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 adb pull /system/bin/qmuxd  ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -159,9 +155,6 @@ adb pull /system/lib/libgemini.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcommondefs.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__VENDOR__/$VENDOR/g > ../../../vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk
-# This is the end of the commented out section.
-END
-
 # Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
