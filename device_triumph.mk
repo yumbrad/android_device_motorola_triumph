@@ -17,17 +17,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_PACKAGES += \
-    Gallery3d \
+    Gallery2 \
     SpareParts \
     Term \
-    FileManager \
     LatinIME \
     Mms \
+    Camera \
     gps.triumph \
     lights.triumph \
     copybit.msm7x30 \
     gralloc.msm7x30 \
-#    hwcomposer.default \
     hwcomposer.msm7x30 \
     overlay.default \
     libgenlock \
@@ -36,7 +35,6 @@ PRODUCT_PACKAGES += \
     audio_policy.msm7x30 \
     audio.primary.msm7x30 \
     audio.a2dp.default \
-#    libaudiohw_legacy \
     libaudioutils \
     libtinyalsa \
     libOmxCore \
@@ -44,8 +42,8 @@ PRODUCT_PACKAGES += \
     libOmxVdec
 
 # Camera
-PRODUCT_PACKAGES += \
-    camera.msm7x30
+#PRODUCT_PACKAGES += \
+#    camera.msm7x30
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -133,10 +131,11 @@ PRODUCT_COPY_FILES += \
 
 # Hostapd
 PRODUCT_COPY_FILES += \
-#    device/motorola/triumph/prebuilt/bin/hostapd:/system/bin/hostapd \
-#    device/motorola/triumph/prebuilt/bin/hostapd_cli:/system/bin/hostapd_cli \
     device/motorola/triumph/files/etc/firmware/wlan/hostapd_default.conf:/system/etc/firmware/wlan/hostapd_default.conf \
     device/motorola/triumph/files/etc/init.d/08hostapd:/system/etc/init.d/08hostapd
+#    device/motorola/triumph/prebuilt/bin/hostapd:/system/bin/hostapd \
+#    device/motorola/triumph/prebuilt/bin/hostapd_cli:/system/bin/hostapd_cli
+
 
 # Audio 
 PRODUCT_COPY_FILES += \
