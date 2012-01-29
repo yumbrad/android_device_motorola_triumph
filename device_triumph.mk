@@ -99,6 +99,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/keylayout/fih_ringswitch.kl:system/usr/keylayout/fih_ringswitch.kl \
     device/motorola/triumph/keylayout/fluid-keypad.kl:system/usr/keylayout/fluid-keypad.kl \
     device/motorola/triumph/keylayout/fbx_kybd.kl:system/usr/keylayout/fbx_kybd.kl \
+    device/motorola/triumph/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
     device/motorola/triumph/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/motorola/triumph/keylayout/sf6_kybd.kl:system/usr/keylayout/sf6_kybd.kl \
     device/motorola/triumph/keylayout/sf8_kybd.kl:system/usr/keylayout/sf8_kybd.kl \
