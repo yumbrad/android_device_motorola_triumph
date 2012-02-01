@@ -133,9 +133,9 @@ PRODUCT_COPY_FILES += \
 # Hostapd
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/firmware/wlan/hostapd_default.conf:/system/etc/firmware/wlan/hostapd_default.conf \
-    device/motorola/triumph/files/etc/init.d/08hostapd:/system/etc/init.d/08hostapd
-#    device/motorola/triumph/prebuilt/bin/hostapd:/system/bin/hostapd \
-#    device/motorola/triumph/prebuilt/bin/hostapd_cli:/system/bin/hostapd_cli
+    device/motorola/triumph/files/etc/init.d/08hostapd:/system/etc/init.d/08hostapd \
+    device/motorola/triumph/prebuilt/bin/hostapd:/system/bin/hostapd \
+    device/motorola/triumph/prebuilt/bin/hostapd_cli:/system/bin/hostapd_cli
 
 
 # Audio 
@@ -187,9 +187,8 @@ PRODUCT_COPY_FILES += \
 
 # Modules
 # commenting these until I rebuild the kernel and make up to date versions of these modules
-#PRODUCT_COPY_FILES += \
-#    device/motorola/triumph/modules/tun.ko:/system/lib/modules/tun.ko \
-#    device/motorola/triumph/modules/cifs.ko:/system/lib/modules/cifs.ko
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/modules/cifs.ko:/system/lib/modules/cifs.ko
 
 # Init.d task management
 PRODUCT_COPY_FILES += \
@@ -215,9 +214,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.ms=android-motorola \
     ro.com.google.clientidbase.gmm=android-motorola \
     ro.telephony.ril.v3=datacall,signalstrength
-
-# Triumph uses high-density artwork where available
-# PRODUCT_LOCALES += hdpi
 
 # Set region
 PRODUCT_DEFAULT_LANGUAGE := en_US
