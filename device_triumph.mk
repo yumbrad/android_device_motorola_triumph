@@ -42,8 +42,8 @@ PRODUCT_PACKAGES += \
     libOmxVdec
 
 # Camera
-#PRODUCT_PACKAGES += \
-#    camera.msm7x30
+PRODUCT_PACKAGES += \
+    camera.msm7x30
 
 # Init files
 PRODUCT_COPY_FILES += \

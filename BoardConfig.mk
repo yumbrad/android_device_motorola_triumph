@@ -91,7 +91,7 @@ WIFI_SDIO_IF_DRIVER_MODULE_NAME := "librasdioif"
 BOARD_WEXT_NO_COMBO_SCAN := true
 
 # Camera
-
+TARGET_LEGACY_CAMERA := true
 
 # GPS Defines
 #BOARD_USES_QCOM_GPS := true
