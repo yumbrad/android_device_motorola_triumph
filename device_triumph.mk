@@ -213,7 +213,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.yt=android-motorola \
     ro.com.google.clientidbase.am=android-motorola \
     ro.com.google.clientidbase.ms=android-motorola \
-    ro.com.google.clientidbase.gmm=android-motorola
+    ro.com.google.clientidbase.gmm=android-motorola \
+    ro.telephony.ril.v3=datacall,signalstrength
 
 # Triumph uses high-density artwork where available
 # PRODUCT_LOCALES += hdpi
