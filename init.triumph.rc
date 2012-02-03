@@ -204,6 +204,7 @@ service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
 
 # KD 9/12/2011  Add service at boot to populate the APN in the telephony area
 service apn-populate /system/bin/sh /system/etc/init.apn.sh
+    class main
     user root
     group radio
     oneshot
@@ -227,30 +228,37 @@ on property:ro.emmc=1
     start rmt_storage
 
 service port-bridge /system/bin/port-bridge /dev/smd0 /dev/ttyGS0
+    class main
 
 service qmuxd /system/bin/qmuxd
+    class main
     user radio
     group radio
 
 service fm_server /system/bin/fm_server
+    class main
     user system
     group system
     oneshot
 
 service cnd /system/bin/cnd
+    class main
     socket cnd stream 660 root radio
 
 service wpdiagd /system/bin/wpdiagd
+    class main
     oneshot
     socket wpdiagd stream 666
 
 service netmgrd /system/bin/netmgrd
+    class main
 
 on property:ro.use_data_netmgrd=false
     # netmgr not supported on specific target
     stop netmgrd
 
 service wiperiface /system/bin/wiperiface
+    class main
     user location
     group qcom_oncrpc
     oneshot
@@ -279,6 +287,7 @@ service geomagneticd /system/bin/geomagneticd
     group system input
 
 service orientationd /system/bin/orientationd
+    class main
     user compass
     group system input
 

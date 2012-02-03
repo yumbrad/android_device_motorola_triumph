@@ -1,9 +1,9 @@
 #
 # system.prop for triumph
 #
-ro.telephony.ril_nid=97
-ro.telephony.ril_prl=1115
 ro.telephony.ril_class=QualcommNoSimReadyRIL
+ro.telephony.ril_prl=61007
+ro.telephony.no_icc=true
 ro.ril.def.preferred.network=4
 ro.telephony.default_network=4
 rild.libpath=/system/lib/libril-qc-1.so
